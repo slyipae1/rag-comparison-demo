@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG Pipeline Answer Preparation Time</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        section { margin-bottom: 2.5em; }
+        h2 { margin-bottom: 0.5em; }
+        .svg-container { border: 1px solid #ddd; padding: 1em; background: #fafafa; }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>LLM_Google</h2>
+        <div class="svg-container">
+            <object type="image/svg+xml" data="./images/LLM_Google_token_vs_time.svg" width="100%"></object>
+        </div>
+    </section>
+    <section>
+        <h2>LLM_Google_DB</h2>
+        <div class="svg-container">
+            <object type="image/svg+xml" data="./images/LLM_Google_DB_token_vs_time.svg" width="100%"></object>
+        </div>
+    </section>
+    <section>
+        <h2>LLM_Google_Graph_RAG</h2>
+        <div class="svg-container">
+            <object type="image/svg+xml" data="./images/LLM_Google_Graph_RAG_token_vs_time.svg" width="100%"></object>
+        </div>
+    </section>
+</body>
+</html>

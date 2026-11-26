@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-comparison-demo"
+version = "0.1.0"
+description = "Configuration-driven framework and demo for comparing LLM and RAG pipelines"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.27",
+  "pydantic>=2.6",
+  "pydantic-settings>=2.2",
+  "gradio>=4.0",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+full = [
+  "langchain-core>=0.2",
+  "langchain-community>=0.2",
+  "langchain-openai>=0.1",
+  "langchain-huggingface>=0.1",
+  "sentence-transformers>=3.0",
+  "torch>=2.0",
+  "pymilvus>=2.4",
+  "chromadb>=0.5",
+  "psycopg2-binary>=2.9",
+  "neo4j>=5.0",
+  "matplotlib>=3.8",
+  "seaborn>=0.13",
+]
+test = ["pytest>=8.0", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

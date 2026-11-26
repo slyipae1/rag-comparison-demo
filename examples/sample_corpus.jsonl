@@ -1,0 +1,3 @@
+{"id": "s1", "text": "A configuration-driven pipeline lets the same question be sent to several retrieval strategies."}
+{"id": "s2", "text": "Latency can be recorded per stage, for example retrieval, summarization and answer generation."}
+{"id": "s3", "text": "Synthetic corpora are used here so the demo does not depend on external documents."}

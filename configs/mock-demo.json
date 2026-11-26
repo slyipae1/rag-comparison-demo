@@ -1,0 +1,16 @@
+{
+  "LLM only (mock)": {
+    "RAG_pipeline_type": "mock_llm_only",
+    "API_host": "127.0.0.1",
+    "API_port": 8024,
+    "mock_delay_seconds": 0.01,
+    "record_timing": false
+  },
+  "LLM + retrieval (mock)": {
+    "RAG_pipeline_type": "mock_rag",
+    "API_host": "127.0.0.1",
+    "API_port": 8023,
+    "mock_delay_seconds": 0.05,
+    "record_timing": false
+  }
+}

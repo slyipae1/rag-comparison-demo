@@ -1,0 +1,20 @@
+# Optional heavy dependencies for the full (non-mock) configurations.
+# Install only in an environment where you can provide the corresponding services.
+-r requirements.txt
+langchain-core>=0.2
+langchain-community>=0.2
+langchain-openai>=0.1
+langchain-huggingface>=0.1
+sentence-transformers>=3.0
+torch>=2.0
+pymilvus>=2.4
+chromadb>=0.5
+psycopg2-binary>=2.9
+neo4j>=5.0
+matplotlib>=3.8
+seaborn>=0.13
+
+# Graph backends are external projects and are intentionally not vendored here:
+#   hirag, lightrag, hipporag, igraph
+# Follow each upstream project's installation instructions, or use the
+# experimental adapters in src/rag_comparison/backends/graph/ as references.

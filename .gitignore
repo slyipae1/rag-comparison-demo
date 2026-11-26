@@ -1,0 +1,42 @@
+# Secrets and local environment
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Local-only working files (never published)
+.local/
+
+# Local runtime data
+logs/
+plots/
+data/
+*.log
+*.out
+*.db
+*.sqlite
+google_raw.txt
+google_raw.jsonl
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Test/build artifacts
+.pytest_cache/
+.mypy_cache/
+.coverage
+dist/
+build/

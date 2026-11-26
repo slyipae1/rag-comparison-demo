@@ -1,0 +1,95 @@
+{
+  "LLM with Google": {
+    "RAG_pipeline_type": "LLM_Google",
+    "API_host": "127.0.0.1",
+    "API_port": 8024,
+    "internal_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "external_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "serpapi_api_key": "",
+    "search_cache_path": ""
+  },
+  "LLM with Google & DB (MilvusDB)": {
+    "RAG_pipeline_type": "LLM_Google_DB",
+    "API_host": "127.0.0.1",
+    "API_port": 8023,
+    "DB_type": "MilvusDB",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "data_dir": "./data/corpus",
+    "embedding_pkl_path": "./data/embeddings.pkl",
+    "collection_name": "rag_comparison_demo",
+    "milvus_host": "localhost",
+    "milvus_port": "19530",
+    "milvus_user": "",
+    "milvus_password": "",
+    "milvus_db_name": "default",
+    "milvus_index_type": "HNSW",
+    "milvus_metric_type": "L2",
+    "Retriever_type": "CompressionRetriever",
+    "retrieval_top_k": 10,
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "rerank_top_k": 5,
+    "internal_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "external_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    }
+  },
+  "LLM with Google & Graph RAG (HiRAG)": {
+    "RAG_pipeline_type": "LLM_Google_Graph_RAG",
+    "API_host": "127.0.0.1",
+    "API_port": 8022,
+    "Graph_RAG_type": "HiRAG",
+    "data_dir": "./data/corpus",
+    "hirag": {
+      "working_dir": "./data/hirag",
+      "enable_llm_cache": false,
+      "enable_hierachical_mode": true,
+      "mode": "hi",
+      "top_m": 10,
+      "only_need_context": true
+    },
+    "retrieval_top_k": 10,
+    "embedding_model_api": {
+      "model_name": "local-embedding-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8001/v1/embeddings",
+      "max_token_size": 8192,
+      "embedding_dim": 1024
+    },
+    "internal_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "external_LLM": {
+      "model_name": "your-local-model",
+      "API_key": "EMPTY",
+      "base_url": "http://localhost:8000/v1",
+      "max_tokens": 4096,
+      "stream": false
+    }
+  }
+}
